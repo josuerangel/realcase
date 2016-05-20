@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Scores</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<style>
+		#txtEmail{
+			width: 50%;
+		}
+		.h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<h1>Score Tables</h1>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="txtEmail" class="control-label">Selecciona el usuario:</label>
+					<input id="txtEmail" name="email" type="email" placeholder="contacto@inflexionsoftware.com">
+					<button type="button" id="btnConsultar" class="btn btn-primary">Consultar</button>
+				</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-4">
+
+			</div>
+			<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div id="table-content" class="col-md-8">
+				<table id="tblScores" class="table table-striped">
+					<thead>
+					<tr>
+						<th>Descripcion</th>
+						<th>Score</th>
+					</tr>
+					</thead>
+					<tbody id="bodyRender">
+
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+	<script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+	<script type="text/javascript" src="handlebars.min-latest.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script id="row-template" type="text/x-handlebars-template">
+		{{#data}}
+		<tr>
+			<td>{{juego}}</td>
+			<td>{{score}}</td>
+		</tr>
+		{{/data}}
+	</script>
+</body>
+</html>
